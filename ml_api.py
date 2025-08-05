@@ -13,7 +13,7 @@ def assess_transaction():
     data = request.json
 
     # Optional: normalize ISO timestamp → hour
-    t = data.get("time")
+    t = data.get("created_at")
     print(data)
     if isinstance(t, str):
         t = datetime.fromisoformat(t.rstrip("Z")).hour
