@@ -18,7 +18,7 @@ def assess_transaction():
     if isinstance(t, str):
         t = datetime.fromisoformat(t.rstrip("Z")).hour
         print(f"t is {t}")
-        data["time"] = t+12
+        data["time"] = t
     try:
         result = assess(data, models)
         risk = result["risk"]
